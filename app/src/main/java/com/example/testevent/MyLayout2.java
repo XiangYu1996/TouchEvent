@@ -23,6 +23,7 @@ public class MyLayout2 extends LinearLayout {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {//拦截
+        //内部拦截法    通知父控件这个动作我来处理
         getParent().requestDisallowInterceptTouchEvent(true);
         Log.d(TAG, "MyLayout2 onInterceptTouchEvent: " +ev.getAction());
       return super.onInterceptTouchEvent(ev);

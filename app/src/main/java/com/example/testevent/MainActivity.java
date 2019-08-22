@@ -59,7 +59,6 @@ public class MainActivity extends AppCompatActivity {
                         lastY = y;
                         break;
                     case MotionEvent.ACTION_UP:
-
                         // 计算偏移量
                         int offsetX = Math.abs(x - lastX);
                         int offsetY = Math.abs(y - lastY);
@@ -67,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "myLayout22222滑动", Toast.LENGTH_SHORT).show();
                             Log.d(TAG, "myLayout2  onTouch:  滑动");
                         } else {
-                            //这句代码：做myLayout.setOnClickListener中的点击事件，自定义中performClick()也要重写
+                            //这句代码：做myLayout.setOnClickListener中的点击事件，在自定义中performClick()也要重写
                             myLayout2.performClick();
 //                            Toast.makeText(MainActivity.this, "myLayout22222点击", Toast.LENGTH_SHORT).show();
 //                            Log.d(TAG, "myLayout2  onTouch:  点击");

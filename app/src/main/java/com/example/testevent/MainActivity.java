@@ -2,6 +2,7 @@ package com.example.testevent;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -39,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         myButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,MoveTest.class);
+                startActivity(intent);
                 Toast.makeText(MainActivity.this, "MyButton", Toast.LENGTH_SHORT).show();
             }
         });
